@@ -3,180 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MorTechs Engineering | Intelligent Energy & Technology Systems</title>
+<title>Morgan Wanjohi | Engineer</title>
 
 <style>
-:root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #e2e8f0;
-    --accent: #38bdf8;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.light-mode {
-    --bg: #f4f4f4;
-    --card: #ffffff;
-    --text: #1e293b;
-    --accent: #0ea5e9;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
     font-family: Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
+    background: #0f172a;
+    color: #e2e8f0;
     line-height: 1.6;
-    transition: background 0.3s, color 0.3s;
 }
 
-.container { width:90%; max-width:1200px; margin:auto; }
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
 
 header {
-    padding:20px 0;
-    border-bottom:1px solid rgba(255,255,255,0.1);
-    position:relative;
+    padding: 20px 0;
+    border-bottom: 1px solid #1e293b;
+    position: relative;
 }
 
 .nav-container {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo { font-weight:bold; }
+.logo {
+    font-size: 1.2rem;
+}
 
 nav ul {
-    list-style:none;
-    display:flex;
-    gap:20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
-    text-decoration:none;
-    color:var(--text);
-    transition:0.3s;
+    text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s;
 }
 
-nav a:hover { color:var(--accent); }
+nav a:hover {
+    color: #38bdf8;
+}
 
 .cv-btn {
-    background:var(--accent);
-    padding:6px 10px;
-    border-radius:4px;
-    color:#000;
-    font-weight:bold;
+    background: #38bdf8;
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: #0f172a;
+    font-weight: bold;
 }
 
 .hamburger {
-    display:none;
-    font-size:24px;
-    cursor:pointer;
-}
-
-.toggle-theme {
-    cursor:pointer;
-    padding:6px 10px;
-    border:1px solid var(--accent);
-    border-radius:4px;
-    margin-left:10px;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .hero {
-    text-align:center;
-    padding:100px 0;
-    background:var(--card);
+    text-align: center;
+    padding: 80px 0;
+    background: #1e293b;
 }
 
-.section { padding:60px 0; }
+.section {
+    padding: 60px 0;
+}
 
 h2 {
-    margin-bottom:30px;
-    border-left:4px solid var(--accent);
-    padding-left:10px;
+    margin-bottom: 30px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 10px;
 }
 
 .skills-grid,
 .projects-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
+.skills-grid div,
 .card {
-    background:var(--card);
-    padding:20px;
-    border-radius:6px;
-    transition:0.3s;
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
+.skills-grid div:hover,
 .card:hover {
-    transform:translateY(-5px);
+    background: #334155;
+    transform: translateY(-5px);
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
 }
 
 .filter-buttons button {
-    margin-right:10px;
-    padding:8px 12px;
-    border:none;
-    background:var(--card);
-    color:var(--text);
-    cursor:pointer;
-    border-radius:4px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #1e293b;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .filter-buttons button:hover {
-    background:var(--accent);
-    color:#000;
+    background: #38bdf8;
+    color: #0f172a;
 }
 
 form {
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 input, textarea {
-    padding:12px;
-    border:none;
-    border-radius:5px;
-    background:var(--card);
-    color:var(--text);
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #1e293b;
+    color: white;
 }
 
-button {
-    background:var(--accent);
-    border:none;
-    padding:12px;
-    border-radius:5px;
-    font-weight:bold;
-    cursor:pointer;
+button[type="submit"] {
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background: #0ea5e9;
 }
 
 footer {
-    text-align:center;
-    padding:20px;
-    border-top:1px solid rgba(255,255,255,0.1);
-    margin-top:40px;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #1e293b;
+    margin-top: 40px;
 }
 
-/* Admin Panel */
-#admin-panel {
-    display:none;
-    background:var(--card);
-    padding:20px;
-    margin-top:20px;
-    border-radius:6px;
+/* Fade animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
 }
 
-/* Fade */
-.fade { opacity:0; transform:translateY(20px); transition:0.8s; }
-.fade.show { opacity:1; transform:translateY(0); }
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 /* Mobile */
-@media (max-width:768px){
-    nav { display:none; position:absolute; top:60px; right:20px; background:var(--card); padding:20px; border-radius:6px; }
-    nav ul { flex-direction:column; }
-    .hamburger { display:block; }
+@media (max-width: 768px) {
+
+    nav {
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        background: #1e293b;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 </style>
 </head>
@@ -184,167 +202,134 @@ footer {
 <body>
 
 <header>
-<div class="container nav-container">
-    <div class="logo">MorTechs Engineering</div>
+    <div class="container nav-container">
+        <h1 class="logo">Morgan Wanjohi</h1>
 
-    <div>
-        <span class="toggle-theme" id="themeToggle">Toggle Theme</span>
-        <span class="hamburger" id="hamburger">☰</span>
+        <div class="hamburger" id="hamburger">☰</div>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="Morgan-Wanjohi-CV.pdf" download class="cv-btn">Download CV</a></li>
+            </ul>
+        </nav>
     </div>
-
-    <nav id="navMenu">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="Morgan-Wanjohi-CV.pdf" download class="cv-btn">Download CV</a></li>
-        </ul>
-    </nav>
-</div>
 </header>
 
-<section class="hero fade">
-<div class="container">
-    <h1 id="typing"></h1>
-    <p>Power Systems • Solar Energy • Automation • Networking • AI Integration</p>
-</div>
+<section class="hero fade-in">
+    <div class="container">
+        <h2>Electrical Engineer & Technology Specialist</h2>
+        <p>Solar Energy | Networking | Automation | AI Systems</p>
+    </div>
 </section>
 
-<section id="about" class="container section fade">
-<h2>About MorTechs</h2>
-<p>
-Professional engineering brand delivering intelligent electrical,
-renewable energy, networking, and automation solutions.
-Focused on reliability, performance, and scalable technology integration.
-</p>
+<section id="about" class="container section fade-in">
+    <h2>About</h2>
+    <p>
+        Engineer focused on intelligent energy systems, networking infrastructure,
+        and scalable automation solutions.
+    </p>
 </section>
 
-<section id="projects" class="container section fade">
-<h2>Projects</h2>
-
-<div class="filter-buttons">
-<button data-filter="all">All</button>
-<button data-filter="solar">Solar</button>
-<button data-filter="network">Networking</button>
-<button data-filter="automation">Automation</button>
-</div>
-
-<div class="projects-grid" id="projectsContainer">
-</div>
-
-<button onclick="adminLogin()">Admin Login</button>
-
-<div id="admin-panel">
-<h3>Add Project</h3>
-<input type="text" id="projTitle" placeholder="Project Title">
-<input type="text" id="projCategory" placeholder="Category (solar/network/automation)">
-<textarea id="projDesc" placeholder="Project Description"></textarea>
-<button onclick="addProject()">Add Project</button>
-</div>
-
+<section id="skills" class="container section fade-in">
+    <h2>Core Competencies</h2>
+    <div class="skills-grid">
+        <div>Electrical Installation</div>
+        <div>Solar PV Systems</div>
+        <div>Networking & CCTV</div>
+        <div>HTML & CSS</div>
+        <div>Python & AI</div>
+        <div>System Troubleshooting</div>
+    </div>
 </section>
 
-<section id="contact" class="container section fade">
-<h2>Contact</h2>
+<section id="projects" class="container section fade-in">
+    <h2>Projects</h2>
 
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
+    <div class="filter-buttons">
+        <button data-filter="all">All</button>
+        <button data-filter="solar">Solar</button>
+        <button data-filter="network">Networking</button>
+        <button data-filter="web">Web</button>
+    </div>
 
+    <div class="projects-grid">
+        <div class="card" data-category="solar">
+            <h3>Residential Solar Installation</h3>
+            <p>Solar PV + inverter + battery integration.</p>
+        </div>
+
+        <div class="card" data-category="network">
+            <h3>Commercial CCTV Deployment</h3>
+            <p>Structured cabling and surveillance system setup.</p>
+        </div>
+
+        <div class="card" data-category="web">
+            <h3>Portfolio Website</h3>
+            <p>Responsive HTML/CSS professional site.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="container section fade-in">
+    <h2>Contact</h2>
+
+    <!-- Replace YOUR_FORM_ID -->
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
 </section>
 
 <footer>
-© 2026 MorTechs Engineering
+    <p>© 2026 Morgan Wanjohi</p>
 </footer>
 
 <script>
 // Mobile menu
-document.getElementById("hamburger").onclick = () => {
-    const nav = document.getElementById("navMenu");
-    nav.style.display = nav.style.display === "block" ? "none" : "block";
-};
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
-// Theme toggle
-const toggle = document.getElementById("themeToggle");
-if(localStorage.getItem("theme") === "light"){
-    document.body.classList.add("light-mode");
-}
-toggle.onclick = () => {
-    document.body.classList.toggle("light-mode");
-    localStorage.setItem("theme",
-        document.body.classList.contains("light-mode") ? "light" : "dark");
-};
+hamburger.addEventListener("click", () => {
+    navMenu.style.display =
+        navMenu.style.display === "block" ? "none" : "block";
+});
 
-// Typing animation
-const text = "Intelligent Engineering & Energy Solutions";
-let i = 0;
-function type(){
-    if(i < text.length){
-        document.getElementById("typing").innerHTML += text.charAt(i);
-        i++;
-        setTimeout(type, 50);
-    }
-}
-type();
+// Fade animation
+const faders = document.querySelectorAll(".fade-in");
 
-// Fade on scroll
-const faders = document.querySelectorAll(".fade");
-const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
             entry.target.classList.add("show");
         }
     });
 });
-faders.forEach(el=>observer.observe(el));
 
-// Project system
-let projects = JSON.parse(localStorage.getItem("projects")) || [
-    {title:"Solar PV Installation", category:"solar", desc:"Residential solar system deployment."},
-    {title:"Office CCTV Setup", category:"network", desc:"Commercial surveillance deployment."}
-];
+faders.forEach(fade => observer.observe(fade));
 
-function renderProjects(filter="all"){
-    const container = document.getElementById("projectsContainer");
-    container.innerHTML="";
-    projects.forEach(p=>{
-        if(filter==="all" || p.category===filter){
-            container.innerHTML += `
-                <div class="card">
-                    <h3>${p.title}</h3>
-                    <p>${p.desc}</p>
-                </div>
-            `;
-        }
+// Project filtering
+const filterButtons = document.querySelectorAll(".filter-buttons button");
+const projects = document.querySelectorAll(".card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const filter = button.getAttribute("data-filter");
+
+        projects.forEach(project => {
+            if (filter === "all" || project.dataset.category === filter) {
+                project.style.display = "block";
+            } else {
+                project.style.display = "none";
+            }
+        });
     });
-}
-renderProjects();
-
-document.querySelectorAll(".filter-buttons button").forEach(btn=>{
-    btn.onclick = ()=> renderProjects(btn.dataset.filter);
 });
-
-function adminLogin(){
-    const pass = prompt("Enter admin password:");
-    if(pass === "admin123"){
-        document.getElementById("admin-panel").style.display="block";
-    } else {
-        alert("Incorrect password");
-    }
-}
-
-function addProject(){
-    const title = document.getElementById("projTitle").value;
-    const category = document.getElementById("projCategory").value;
-    const desc = document.getElementById("projDesc").value;
-
-    projects.push({title, category, desc});
-    localStorage.setItem("projects", JSON.stringify(projects));
-    renderProjects();
-}
 </script>
 
 </body>
